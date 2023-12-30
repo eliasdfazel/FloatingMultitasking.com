@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Floating Multitasking: All Apps In Floating Windows From Floating Shortcuts">
+  <meta name="keywords" content="Multitasking App, Productivity App,
+      Android Multitasking, Android Productivity, Floating Applications, Floating Multitasking,
+      Android, iPhone, iPad, Tablet">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="geeksempire_website">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <meta name="google-site-verification" content="cEEQ3eFI5jTWq2vEi7moR81WIm0xNzhUAE2jDac3Aqs" />
+
+  <meta property="og:image" content="cover.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Floating Multitasking For Android</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    const serviceWorkerVersion = null;
+  </script>
+
+  <script type="text/javascript">
+    window.flutterWebRenderer = "html";
+  </script>
+  <script src="flutter.js" defer></script>
+</head>
+<body style="background-color: #3C434DFF;
+                 background-image: url(favicon.png);
+                 background-size: 19%;
+                 background-repeat: no-repeat;
+                 background-attachment: fixed;
+                 background-position: center; ">
+
+<script>
+  window.addEventListener('load', function(ev) {
+    // Download main.dart.js
+    _flutter.loader.loadEntrypoint({
+      serviceWorker: {
+        serviceWorkerVersion: serviceWorkerVersion,
+      },
+      onEntrypointLoaded: function(engineInitializer) {
+        engineInitializer.initializeEngine().then(function(appRunner) {
+          appRunner.runApp();
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

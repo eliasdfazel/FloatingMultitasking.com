@@ -1,0 +1,117 @@
+name: multitasking
+description: Floating Multitasking
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  ####### ####### #######
+  blur: ^3.0.0
+  ####### ####### #######
+
+
+  ####### ####### #######
+  cupertino_icons: ^1.0.2
+  ####### ####### #######
+
+
+  ####### ####### #######
+  firebase_admin: ^0.2.0
+
+  firebase_core: ^2.2.0
+
+  firebase_analytics: ^10.0.5
+  firebase_crashlytics: ^3.0.5
+
+  flutter_flip_card: ^0.0.4
+
+  flutter_html:
+    path: 'X:\Xlutter\Libraries\flutter_html'
+
+  flutter_rating_stars: ^1.0.3+4
+  ####### ####### #######
+
+
+  ####### ####### #######
+  get: ^4.6.6
+  ####### ####### #######
+
+
+  ####### ####### #######
+  loading_animation_widget:
+    path: 'X:\Xlutter\Libraries\loading_animation_widget'
+  ####### ####### #######
+
+
+  ####### ####### #######
+  share_plus: ^7.2.0
+
+  shared_preferences: ^2.2.2
+  ####### ####### #######
+
+
+  ####### ####### #######
+  url_launcher: ^6.1.5
+  ####### ####### #######
+
+
+  ####### ####### #######
+  widget_mask: ^1.0.0+0
+  ####### ####### #######
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+
+    - assets/facebook_icon.png
+
+    - assets/geeks_empire.png
+
+    - assets/install_icon.png
+
+    - assets/logo.png
+
+    - assets/menu.png
+    - assets/next_background.png
+
+    - assets/privacy.png
+    - assets/projects_icon.png
+
+    - assets/register_icon.png
+
+    - assets/support.png
+    - assets/shadow.png
+
+    - assets/threads_icon.png
+    - assets/tos.png
+    - assets/twitter_icon.png
+
+    - assets/youtube_icon.png
+
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: fonts/ubuntu.ttf
+    - family: Electric
+      fonts:
+        - asset: fonts/electric.ttf
+    - family: Nasa
+      fonts:
+        - asset: fonts/nasa.ttf
