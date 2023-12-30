@@ -1,7 +1,9 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:multitasking/dashboard/ui/Dashboard.dart';
 import 'package:multitasking/firebase_options.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() async {
 
@@ -33,8 +35,12 @@ void main() async {
 
         });
 
-        if (parameters["authenticationId"].toString().isNotEmpty) {
-          debugPrint("Authentication Id: ${parameters["authenticationId"].toString().toUpperCase()}");
+        if (parameters["source"].toString().isNotEmpty) {
+          debugPrint("Source: ${parameters["source"].toString().toUpperCase()}");
+
+          FirebaseAnalytics.instance.logViewPromotion(promotionName: parameters["source"].toString().toUpperCase());
+
+          launchUrl(Uri.parse("https://play.google.com/store/apps/details?id=net.geekstools.floatshort.PRO&utm_source:${parameters["source"].toString().toUpperCase()}"), mode: LaunchMode.externalNonBrowserApplication);
 
           return MaterialPageRoute(
               builder: (_) => dashboard
