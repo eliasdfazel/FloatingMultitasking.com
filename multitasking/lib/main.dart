@@ -21,11 +21,8 @@ void main() async {
         '/Install': (BuildContext context) => dashboard
       },
       onGenerateRoute: (routeSettings) {
-        print(">>> >> > ");
 
         Uri uri = Uri.parse(routeSettings.name ?? "");
-
-        print(">>> >> > " + uri.toString());
 
         Map<String, dynamic> parameters = {};
 
@@ -35,12 +32,12 @@ void main() async {
 
         });
 
-        if (parameters["source"].toString().isNotEmpty) {
-          debugPrint("Source: ${parameters["source"].toString().toUpperCase()}");
+        if (parameters["link"].toString().isNotEmpty) {
+          debugPrint("Link: ${parameters["link"].toString().toUpperCase()}");
 
-          FirebaseAnalytics.instance.logViewPromotion(promotionName: parameters["source"].toString().toUpperCase());
+          FirebaseAnalytics.instance.logViewPromotion(promotionName: parameters["link"].toString().toUpperCase());
 
-          launchUrl(Uri.parse("https://play.google.com/store/apps/details?id=net.geekstools.floatshort.PRO&utm_source:${parameters["source"].toString().toUpperCase()}"), mode: LaunchMode.externalNonBrowserApplication);
+          launchUrl(Uri.parse(parameters["link"].toString().toUpperCase()), mode: LaunchMode.externalNonBrowserApplication);
 
           return MaterialPageRoute(
               builder: (_) => dashboard
