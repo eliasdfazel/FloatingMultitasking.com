@@ -16,9 +16,10 @@ void main() async {
       home: dashboard,
       routes: <String, WidgetBuilder> {
         '/Home': (BuildContext context) => dashboard,
-        '/Install': (BuildContext context) => Container()
+        '/Install': (BuildContext context) => dashboard
       },
       onGenerateRoute: (routeSettings) {
+        print(">>> >> > ");
 
         Uri uri = Uri.parse(routeSettings.name ?? "");
 
@@ -35,7 +36,9 @@ void main() async {
         if (parameters["authenticationId"].toString().isNotEmpty) {
           debugPrint("Authentication Id: ${parameters["authenticationId"].toString().toUpperCase()}");
 
-          return null;
+          return MaterialPageRoute(
+              builder: (_) => dashboard
+          );
 
         } else {
 
