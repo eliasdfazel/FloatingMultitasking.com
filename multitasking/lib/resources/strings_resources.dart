@@ -10,9 +10,9 @@
 
 class StringsResources {
 
-  static String geeksEmpire() {
+  static String websiteTitle() {
 
-    return "Geeks Empire";
+    return "Floating Multitasking For Android";
   }
 
   static String projects() {

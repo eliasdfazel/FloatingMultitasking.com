@@ -61,7 +61,7 @@ class _MenusState extends State<Menus> {
 
                         Expanded(
                             child: Text(
-                              StringsResources.geeksEmpire(),
+                              StringsResources.websiteTitle(),
                               maxLines: 2,
                               style: const TextStyle(
                                   color: ColorsResources.light,

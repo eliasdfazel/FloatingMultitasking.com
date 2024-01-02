@@ -100,7 +100,7 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
     return SafeArea(
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: StringsResources.geeksEmpire(),
+            title: StringsResources.websiteTitle(),
             color: ColorsResources.black,
             theme: ThemeData(
               fontFamily: 'Ubuntu',
