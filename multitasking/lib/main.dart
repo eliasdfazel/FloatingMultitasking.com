@@ -1,9 +1,8 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:multitasking/dashboard/ui/Dashboard.dart';
 import 'package:multitasking/firebase_options.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:multitasking/install/Install.dart';
 
 void main() async {
 
@@ -18,38 +17,9 @@ void main() async {
       home: dashboard,
       routes: <String, WidgetBuilder> {
         '/Home': (BuildContext context) => dashboard,
-        '/Install': (BuildContext context) => dashboard
+        '/Install': (BuildContext context) => const Install()
       },
       onGenerateRoute: (routeSettings) {
-
-        Uri uri = Uri.parse(routeSettings.name ?? "");
-
-        Map<String, dynamic> parameters = {};
-
-        uri.queryParameters.forEach((key, value) {
-
-          parameters[key] = value;
-
-        });
-
-        if (parameters["link"].toString().isNotEmpty) {
-          debugPrint("Link: ${parameters["link"].toString().toUpperCase()}");
-
-          FirebaseAnalytics.instance.logViewPromotion(promotionName: parameters["link"].toString().toUpperCase());
-
-          launchUrl(Uri.parse(parameters["link"].toString().toUpperCase()), mode: LaunchMode.externalNonBrowserApplication);
-
-          return MaterialPageRoute(
-              builder: (_) => dashboard
-          );
-
-        } else {
-
-          return MaterialPageRoute(
-              builder: (_) => dashboard
-          );
-
-        }
 
       },
       onUnknownRoute: (RouteSettings settings) {
