@@ -53,13 +53,13 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDCm_GeKAXirETnb8t9-6MBeqXQLlwoCZQ',
-    appId: '1:517247283133:web:49500442f7a8f171e5acd4',
-    messagingSenderId: '517247283133',
-    projectId: 'floating-shortcuts-pro',
-    authDomain: 'floating-shortcuts-pro.firebaseapp.com',
-    databaseURL: 'https://floating-shortcuts-pro.firebaseio.com',
-    storageBucket: 'floating-shortcuts-pro.appspot.com',
-    measurementId: 'G-E0YWSTSNX9',
+      apiKey: "AIzaSyB2vpLDZJL2SkJ5UpixSTDDT5joY1nFE_0",
+      authDomain: "arwen-multitasking.firebaseapp.com",
+      databaseURL: "https://arwen-multitasking-default-rtdb.firebaseio.com",
+      projectId: "arwen-multitasking",
+      storageBucket: "arwen-multitasking.appspot.com",
+      messagingSenderId: "1002127527001",
+      appId: "1:1002127527001:web:efbe912a96756e4b783548",
+      measurementId: "G-T3WB5GEYSV"
   );
 }
