@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:multitasking/dashboard/ui/Dashboard.dart';
 import 'package:multitasking/firebase_options.dart';
-import 'package:multitasking/install/Install.dart';
 
 void main() async {
 
@@ -17,7 +16,6 @@ void main() async {
       home: dashboard,
       routes: <String, WidgetBuilder> {
         '/Home': (BuildContext context) => dashboard,
-        '/Install': (BuildContext context) => const Install()
       },
       onGenerateRoute: (routeSettings) {
 
