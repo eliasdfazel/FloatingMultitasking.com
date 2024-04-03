@@ -252,6 +252,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                     width: calculatePercentage(27, displayLogicalWidth(context)),
                     child: Image.network(
                       widget.contentDataStructure.applicationCoverValue(),
+                      alignment: Alignment.bottomCenter,
                       fit: BoxFit.cover,
                     ),
                   )
