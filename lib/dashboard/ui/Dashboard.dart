@@ -142,17 +142,17 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
 
                   /* Start - Content */
                   AnimatedContainer(
-                    duration: const Duration(seconds: 1),
-                    curve: Curves.fastOutSlowIn,
-                    decoration: BoxDecoration(
-                      color: ColorsResources.premiumDark,
-                      borderRadius: radiusAnimation,
-                      border: Border.all(
-                        color: Colors.transparent,
-                        width: 0
-                      )
-                    ),
-                    child: contentPlaceholder
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.fastOutSlowIn,
+                      decoration: BoxDecoration(
+                          color: ColorsResources.premiumDark,
+                          borderRadius: radiusAnimation,
+                          border: Border.all(
+                              color: Colors.transparent,
+                              width: 0
+                          )
+                      ),
+                      child: contentPlaceholder
                   ),
                   /* End - Content */
 
@@ -162,52 +162,52 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
 
                   /* Start - Next */
                   Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: SizedBox(
-                        height: nextPageIndicatorHeight,
-                        child: InkWell(
-                          onTap: () {
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: SizedBox(
+                              height: nextPageIndicatorHeight,
+                              child: Visibility(
+                                  visible: nextVisibility,
+                                  child: Stack(
+                                      children: [
 
-                            if ((pageIndex + 1) == allContent.length) {
+                                        const Align(
+                                            alignment: Alignment.bottomCenter,
+                                            child: Image(
+                                              image: AssetImage("assets/next_background.png"),
+                                            )
+                                        ),
 
-                              pageController.animateToPage(0, duration: const Duration(milliseconds: 777), curve: Curves.easeInOutCubic);
+                                        Center(
+                                            child: ClipRRect(
+                                                borderRadius: BorderRadius.circular(99),
+                                                child: InkWell(
+                                                    onTap: () {
 
-                            } else {
+                                                      if ((pageIndex + 1) == allContent.length) {
 
-                              pageController.nextPage(duration: const Duration(milliseconds: 555), curve: Curves.decelerate);
+                                                        pageController.animateToPage(0, duration: const Duration(milliseconds: 777), curve: Curves.easeInOutCubic);
 
-                            }
+                                                      } else {
 
-                          },
-                          child: Visibility(
-                            visible: nextVisibility,
-                            child: Stack(
-                                children: [
+                                                        pageController.nextPage(duration: const Duration(milliseconds: 555), curve: Curves.decelerate);
 
-                                  const Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Image(
-                                      image: AssetImage("assets/next_background.png"),
-                                    )
-                                  ),
+                                                      }
 
-                                  Center(
-                                      child: ClipRRect(
-                                          borderRadius: BorderRadius.circular(99),
-                                          child: nextIconPlaceholder
-                                      )
+                                                    },
+                                                    child: nextIconPlaceholder
+                                                )
+                                            )
+                                        )
+
+                                      ]
                                   )
-
-                                ]
-                            )
+                              )
                           )
-                        )
                       )
-                    )
                   )
                   /* End - Next */
 
@@ -284,13 +284,13 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
       setState(() {
 
         nextIconPlaceholder = SizedBox(
-          height: nextPageIconHeight,
-          width: nextPageIconWidth,
-          child: Image.network(
-            allContent[0].applicationIconValue(),
             height: nextPageIconHeight,
             width: nextPageIconWidth,
-          )
+            child: Image.network(
+              allContent[0].applicationIconValue(),
+              height: nextPageIconHeight,
+              width: nextPageIconWidth,
+            )
         );
 
         nextVisibility = true;
@@ -302,13 +302,13 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
       setState(() {
 
         nextIconPlaceholder = SizedBox(
-          height: nextPageIconHeight,
-          width: nextPageIconWidth,
-          child: Image.network(
-            allContent[pageIndex + 1].applicationIconValue(),
             height: nextPageIconHeight,
             width: nextPageIconWidth,
-          )
+            child: Image.network(
+              allContent[pageIndex + 1].applicationIconValue(),
+              height: nextPageIconHeight,
+              width: nextPageIconWidth,
+            )
         );
 
         nextVisibility = true;
@@ -336,10 +336,10 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
       } else {
 
         /* Start - Next Page */
-        nextPageIndicatorHeight = 49;
+        nextPageIndicatorHeight = 37;
 
-        nextPageIconHeight = 37;
-        nextPageIconWidth = 37;
+        nextPageIconHeight = 27;
+        nextPageIconWidth = 27;
         /* End - Next Page */
 
       }
