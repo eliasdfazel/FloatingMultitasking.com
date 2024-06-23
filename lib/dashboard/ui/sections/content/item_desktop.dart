@@ -127,7 +127,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                             child: const Padding(
                                                 padding: EdgeInsets.all(5),
                                                 child: Image(
-                                                  image: AssetImage('assets/facebook_icon.png'),
+                                                  image: AssetImage('images/facebook_icon.png'),
                                                 )
                                             )
                                         )
@@ -145,7 +145,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                             child: const Padding(
                                                 padding: EdgeInsets.all(5),
                                                 child: Image(
-                                                  image: AssetImage('assets/twitter_icon.png'),
+                                                  image: AssetImage('images/twitter_icon.png'),
                                                 )
                                             )
                                         )
@@ -163,7 +163,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                             child: const Padding(
                                                 padding: EdgeInsets.all(5),
                                                 child: Image(
-                                                  image: AssetImage('assets/youtube_icon.png'),
+                                                  image: AssetImage('images/youtube_icon.png'),
                                                 )
                                             )
                                         )
@@ -208,7 +208,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
 
                                                   },
                                                   child: const Image(
-                                                    image: AssetImage('assets/install_icon.png'),
+                                                    image: AssetImage('images/install_icon.png'),
                                                   )
                                               )
                                           )

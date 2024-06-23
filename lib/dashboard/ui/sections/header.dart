@@ -102,7 +102,7 @@ class _HeaderState extends State<Header> {
 
                                       },
                                       child: const Image(
-                                        image: AssetImage("assets/menu.png"),
+                                        image: AssetImage("images/menu.png"),
                                       )
                                   )
                               )
@@ -119,7 +119,7 @@ class _HeaderState extends State<Header> {
                                             height: 57 / scaleParameter,
                                             width: 57 / scaleParameter,
                                             child: const Image(
-                                              image: AssetImage("assets/logo.png"),
+                                              image: AssetImage("images/logo.png"),
                                             )
                                         ),
 
@@ -134,7 +134,7 @@ class _HeaderState extends State<Header> {
                                               child: Align(
                                                 alignment: Alignment.centerLeft,
                                                 child: Image(
-                                                  image: AssetImage("assets/geeks_empire.png"),
+                                                  image: AssetImage("images/geeks_empire.png"),
                                                   fit: BoxFit.contain,
                                                 )
                                               )
@@ -158,7 +158,7 @@ class _HeaderState extends State<Header> {
 
                                       },
                                       child: const Image(
-                                        image: AssetImage("assets/support.png"),
+                                        image: AssetImage("images/support.png"),
                                       )
                                   )
                               )
@@ -173,7 +173,7 @@ class _HeaderState extends State<Header> {
             SizedBox(
                 height: 33 / scaleParameter,
                 child: const Image(
-                  image: AssetImage("assets/shadow.png"),
+                  image: AssetImage("images/shadow.png"),
                   fit: BoxFit.cover,
                 )
             )

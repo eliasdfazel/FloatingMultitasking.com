@@ -50,7 +50,7 @@ class _MenusState extends State<Menus> {
                       children: [
 
                         const Image(
-                          image: AssetImage("assets/logo.png"),
+                          image: AssetImage("images/logo.png"),
                           height: 73,
                           width: 73,
                         ),
@@ -61,7 +61,7 @@ class _MenusState extends State<Menus> {
 
                         Expanded(
                             child: Text(
-                              StringsResources.websiteTitle(),
+                              StringsResources.titleGeeksEmpire(),
                               maxLines: 2,
                               style: const TextStyle(
                                   color: ColorsResources.light,
@@ -103,7 +103,7 @@ class _MenusState extends State<Menus> {
                                 const Padding(
                                     padding: EdgeInsets.all(3),
                                     child: Image(
-                                      image: AssetImage("assets/projects_icon.png"),
+                                      image: AssetImage("images/projects_icon.png"),
                                       color: ColorsResources.light,
                                       height: 51,
                                       width: 51,
@@ -160,7 +160,7 @@ class _MenusState extends State<Menus> {
                                 const Padding(
                                     padding: EdgeInsets.fromLTRB(3, 11, 11, 11),
                                     child: Image(
-                                      image: AssetImage("assets/tos.png"),
+                                      image: AssetImage("images/tos.png"),
                                       color: ColorsResources.light,
                                       height: 51,
                                       width: 51,
@@ -217,7 +217,7 @@ class _MenusState extends State<Menus> {
                                 const Padding(
                                     padding: EdgeInsets.fromLTRB(3, 11, 11, 11),
                                     child: Image(
-                                      image: AssetImage("assets/privacy.png"),
+                                      image: AssetImage("images/privacy.png"),
                                       color: ColorsResources.light,
                                       height: 51,
                                       width: 51,
@@ -265,7 +265,7 @@ class _MenusState extends State<Menus> {
 
                         },
                         child: const Image(
-                          image: AssetImage("assets/threads_icon.png"),
+                          image: AssetImage("images/threads_icon.png"),
                           height: 51,
                           width: 51,
                         )
@@ -282,7 +282,7 @@ class _MenusState extends State<Menus> {
 
                         },
                         child: const Image(
-                          image: AssetImage("assets/twitter_icon.png"),
+                          image: AssetImage("images/twitter_icon.png"),
                           height: 51,
                           width: 51,
                         )
@@ -299,7 +299,7 @@ class _MenusState extends State<Menus> {
 
                         },
                         child: const Image(
-                          image: AssetImage("assets/youtube_icon.png"),
+                          image: AssetImage("images/youtube_icon.png"),
                           height: 51,
                           width: 51,
                         )

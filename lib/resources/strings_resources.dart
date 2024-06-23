@@ -10,6 +10,11 @@
 
 class StringsResources {
 
+  static String titleGeeksEmpire() {
+
+    return "Geeks Empire";
+  }
+
   static String websiteTitle() {
 
     return "Floating Multitasking For Android";

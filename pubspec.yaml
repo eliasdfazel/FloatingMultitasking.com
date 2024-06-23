@@ -79,31 +79,7 @@ flutter:
   uses-material-design: true
 
   assets:
-
-    - assets/facebook_icon.png
-
-    - assets/geeks_empire.png
-
-    - assets/install_icon.png
-
-    - assets/logo.png
-
-    - assets/menu.png
-    - assets/next_background.png
-
-    - assets/privacy.png
-    - assets/projects_icon.png
-
-    - assets/register_icon.png
-
-    - assets/support.png
-    - assets/shadow.png
-
-    - assets/threads_icon.png
-    - assets/tos.png
-    - assets/twitter_icon.png
-
-    - assets/youtube_icon.png
+    - images/
 
   fonts:
     - family: Ubuntu

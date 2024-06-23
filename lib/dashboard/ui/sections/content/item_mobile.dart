@@ -83,7 +83,7 @@ class _ItemMobileState extends State<ItemMobile> {
                                   child: const Padding(
                                       padding: EdgeInsets.all(5),
                                       child: Image(
-                                        image: AssetImage('assets/facebook_icon.png'),
+                                        image: AssetImage('images/facebook_icon.png'),
                                       )
                                   )
                               )
@@ -101,7 +101,7 @@ class _ItemMobileState extends State<ItemMobile> {
                                   child: const Padding(
                                       padding: EdgeInsets.all(5),
                                       child: Image(
-                                        image: AssetImage('assets/twitter_icon.png'),
+                                        image: AssetImage('images/twitter_icon.png'),
                                       )
                                   )
                               )
@@ -119,7 +119,7 @@ class _ItemMobileState extends State<ItemMobile> {
                                   child: const Padding(
                                       padding: EdgeInsets.all(5),
                                       child: Image(
-                                        image: AssetImage('assets/youtube_icon.png'),
+                                        image: AssetImage('images/youtube_icon.png'),
                                       )
                                   )
                               )
@@ -166,7 +166,7 @@ class _ItemMobileState extends State<ItemMobile> {
                                           child: const Padding(
                                             padding: EdgeInsets.fromLTRB(13, 7, 0, 7),
                                             child: Image(
-                                              image: AssetImage('assets/install_icon.png'),
+                                              image: AssetImage('images/install_icon.png'),
                                               fit: BoxFit.fill,
                                             )
                                           )
