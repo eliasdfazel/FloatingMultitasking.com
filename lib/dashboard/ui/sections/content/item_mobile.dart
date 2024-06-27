@@ -208,7 +208,7 @@ class _ItemMobileState extends State<ItemMobile> {
                   child: SizedBox(
                     width: calculatePercentage(83, displayLogicalWidth(context)),
                     height: calculatePercentage(21, displayLogicalHeight(context)),
-                    child: Image.asset(
+                    child: Image.network(
                       widget.contentDataStructure.applicationCoverValue(),
                       alignment: Alignment.bottomCenter,
                       fit: BoxFit.cover,
@@ -226,7 +226,7 @@ class _ItemMobileState extends State<ItemMobile> {
                             child: SizedBox(
                                 height: calculatePercentage(9, displayLogicalHeight(context)),
                                 width: calculatePercentage(9, displayLogicalHeight(context)),
-                                child: Image.asset(
+                                child: Image.network(
                                   widget.contentDataStructure.applicationIconValue(),
                                   fit: BoxFit.cover,
                                 )
@@ -347,7 +347,7 @@ class _ItemMobileState extends State<ItemMobile> {
                 }
 
               },
-              child: Image.asset(
+              child: Image.network(
                 screenshotLink,
               )
           )

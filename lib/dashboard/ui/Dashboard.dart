@@ -177,7 +177,7 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                                         Align(
                                             alignment: Alignment.bottomCenter,
                                             child: Image.asset(
-                                                "assets/images/next_background.png"
+                                                "images/next_background.png"
                                             )
                                         ),
 
@@ -286,7 +286,7 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
         nextIconPlaceholder = SizedBox(
             height: nextPageIconHeight,
             width: nextPageIconWidth,
-            child: Image.asset(
+            child: Image.network(
               allContent[0].applicationIconValue(),
               height: nextPageIconHeight,
               width: nextPageIconWidth,
@@ -304,7 +304,7 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
         nextIconPlaceholder = SizedBox(
             height: nextPageIconHeight,
             width: nextPageIconWidth,
-            child: Image.asset(
+            child: Image.network(
               allContent[pageIndex + 1].applicationIconValue(),
               height: nextPageIconHeight,
               width: nextPageIconWidth,
