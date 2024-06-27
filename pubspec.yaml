@@ -84,10 +84,4 @@ flutter:
   fonts:
     - family: Ubuntu
       fonts:
-        - asset: fonts/ubuntu.ttf
-    - family: Electric
-      fonts:
-        - asset: fonts/electric.ttf
-    - family: Nasa
-      fonts:
-        - asset: fonts/nasa.ttf
+        - asset: fonts/ubuntu.otf
