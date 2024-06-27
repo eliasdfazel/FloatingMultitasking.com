@@ -250,7 +250,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                   borderRadius: BorderRadius.circular(19),
                   child: SizedBox(
                     width: calculatePercentage(27, displayLogicalWidth(context)),
-                    child: Image.network(
+                    child: Image.asset(
                       widget.contentDataStructure.applicationCoverValue(),
                       alignment: Alignment.bottomCenter,
                       fit: BoxFit.cover,
@@ -268,7 +268,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                             child: SizedBox(
                                 height: calculatePercentage(13, displayLogicalHeight(context)),
                                 width: calculatePercentage(13, displayLogicalHeight(context)),
-                                child: Image.network(
+                                child: Image.asset(
                                   widget.contentDataStructure.applicationIconValue(),
                                   fit: BoxFit.cover,
                                 )
@@ -391,7 +391,7 @@ class _ItemDesktopState extends State<ItemDesktop> {
                   }
 
                 },
-                child: Image.network(
+                child: Image.asset(
                   screenshotLink,
                 )
             )

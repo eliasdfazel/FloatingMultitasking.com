@@ -174,10 +174,10 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                                   child: Stack(
                                       children: [
 
-                                        const Align(
+                                        Align(
                                             alignment: Alignment.bottomCenter,
-                                            child: Image(
-                                              image: AssetImage("images/next_background.png"),
+                                            child: Image.asset(
+                                                "assets/images/next_background.png"
                                             )
                                         ),
 
@@ -286,7 +286,7 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
         nextIconPlaceholder = SizedBox(
             height: nextPageIconHeight,
             width: nextPageIconWidth,
-            child: Image.network(
+            child: Image.asset(
               allContent[0].applicationIconValue(),
               height: nextPageIconHeight,
               width: nextPageIconWidth,
@@ -304,7 +304,7 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
         nextIconPlaceholder = SizedBox(
             height: nextPageIconHeight,
             width: nextPageIconWidth,
-            child: Image.network(
+            child: Image.asset(
               allContent[pageIndex + 1].applicationIconValue(),
               height: nextPageIconHeight,
               width: nextPageIconWidth,

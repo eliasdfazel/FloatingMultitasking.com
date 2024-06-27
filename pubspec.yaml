@@ -23,12 +23,12 @@ dependencies:
 
 
   ####### ####### #######
+  firebase_core: ^3.1.0
+
   firebase_admin: ^0.2.0
 
-  firebase_core: ^2.2.0
-
-  firebase_analytics: ^10.0.5
-  firebase_crashlytics: ^3.0.5
+  firebase_analytics: ^11.0.1
+  firebase_crashlytics: ^4.0.1
 
   flutter_flip_card: ^0.0.4
 

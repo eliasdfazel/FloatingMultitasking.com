@@ -49,8 +49,8 @@ class _MenusState extends State<Menus> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
 
-                        const Image(
-                          image: AssetImage("images/logo.png"),
+                        Image.asset(
+                          "images/logo.png",
                           height: 73,
                           width: 73,
                         ),
@@ -100,10 +100,10 @@ class _MenusState extends State<Menus> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
 
-                                const Padding(
-                                    padding: EdgeInsets.all(3),
-                                    child: Image(
-                                      image: AssetImage("images/projects_icon.png"),
+                                Padding(
+                                    padding: const EdgeInsets.all(3),
+                                    child: Image.asset(
+                                      "images/projects_icon.png",
                                       color: ColorsResources.light,
                                       height: 51,
                                       width: 51,
@@ -157,10 +157,10 @@ class _MenusState extends State<Menus> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
 
-                                const Padding(
-                                    padding: EdgeInsets.fromLTRB(3, 11, 11, 11),
-                                    child: Image(
-                                      image: AssetImage("images/tos.png"),
+                                Padding(
+                                    padding: const EdgeInsets.fromLTRB(3, 11, 11, 11),
+                                    child: Image.asset(
+                                      "images/tos.png",
                                       color: ColorsResources.light,
                                       height: 51,
                                       width: 51,
@@ -214,10 +214,10 @@ class _MenusState extends State<Menus> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
 
-                                const Padding(
-                                    padding: EdgeInsets.fromLTRB(3, 11, 11, 11),
-                                    child: Image(
-                                      image: AssetImage("images/privacy.png"),
+                                Padding(
+                                    padding: const EdgeInsets.fromLTRB(3, 11, 11, 11),
+                                    child: Image.asset(
+                                      "images/privacy.png",
                                       color: ColorsResources.light,
                                       height: 51,
                                       width: 51,
