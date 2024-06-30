@@ -11,6 +11,7 @@
 import 'package:flutter/material.dart';
 import 'package:multitasking/resources/colors_resources.dart';
 import 'package:multitasking/resources/strings_resources.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Menus extends StatefulWidget {
@@ -49,10 +50,13 @@ class _MenusState extends State<Menus> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
 
-                        Image.asset(
-                          "images/logo.png",
-                          height: 73,
-                          width: 73,
+                        ImageRenderer(
+                          alt: 'Geeks Empire Logo',
+                          child: Image.asset(
+                            "images/logo.png",
+                            height: 73,
+                            width: 73,
+                          )
                         ),
 
                         const SizedBox(
@@ -60,13 +64,16 @@ class _MenusState extends State<Menus> {
                         ),
 
                         Expanded(
-                            child: Text(
-                              StringsResources.titleGeeksEmpire(),
-                              maxLines: 2,
-                              style: const TextStyle(
-                                  color: ColorsResources.light,
-                                  fontSize: 23
-                              ),
+                            child: TextRenderer(
+                              style: TextRendererStyle.header1,
+                              child: Text(
+                                StringsResources.titleGeeksEmpire(),
+                                maxLines: 2,
+                                style: const TextStyle(
+                                    color: ColorsResources.light,
+                                    fontSize: 23
+                                ),
+                              )
                             )
                         )
 
@@ -102,11 +109,14 @@ class _MenusState extends State<Menus> {
 
                                 Padding(
                                     padding: const EdgeInsets.all(3),
-                                    child: Image.asset(
-                                      "images/projects_icon.png",
-                                      color: ColorsResources.light,
-                                      height: 51,
-                                      width: 51,
+                                    child: ImageRenderer(
+                                      alt: 'Geeks Empire Projects',
+                                      child: Image.asset(
+                                        "images/projects_icon.png",
+                                        color: ColorsResources.light,
+                                        height: 51,
+                                        width: 51,
+                                      )
                                     )
                                 ),
 
@@ -115,13 +125,16 @@ class _MenusState extends State<Menus> {
                                 ),
 
                                 Expanded(
-                                    child: Text(
-                                      StringsResources.projects(),
-                                      maxLines: 2,
-                                      style: const TextStyle(
-                                          color: ColorsResources.lightTransparent,
-                                          fontSize: 19
-                                      ),
+                                    child: TextRenderer(
+                                      style: TextRendererStyle.header2,
+                                      child:  Text(
+                                          StringsResources.projects(),
+                                          maxLines: 2,
+                                          style: const TextStyle(
+                                              color: ColorsResources.lightTransparent,
+                                              fontSize: 19
+                                          )
+                                      )
                                     )
                                 )
 
@@ -159,11 +172,14 @@ class _MenusState extends State<Menus> {
 
                                 Padding(
                                     padding: const EdgeInsets.fromLTRB(3, 11, 11, 11),
-                                    child: Image.asset(
-                                      "images/tos.png",
-                                      color: ColorsResources.light,
-                                      height: 51,
-                                      width: 51,
+                                    child: ImageRenderer(
+                                      alt: 'Arwen AI Terms Of Service',
+                                      child: Image.asset(
+                                        "images/tos.png",
+                                        color: ColorsResources.light,
+                                        height: 51,
+                                        width: 51,
+                                      )
                                     )
                                 ),
 
@@ -172,13 +188,16 @@ class _MenusState extends State<Menus> {
                                 ),
 
                                 Expanded(
-                                    child: Text(
-                                      StringsResources.termService(),
-                                      maxLines: 2,
-                                      style: const TextStyle(
-                                          color: ColorsResources.lightTransparent,
-                                          fontSize: 15
-                                      ),
+                                    child: TextRenderer(
+                                      style: TextRendererStyle.header2,
+                                      child: Text(
+                                        StringsResources.termService(),
+                                        maxLines: 2,
+                                        style: const TextStyle(
+                                            color: ColorsResources.lightTransparent,
+                                            fontSize: 15
+                                        ),
+                                      )
                                     )
                                 )
 
@@ -216,11 +235,14 @@ class _MenusState extends State<Menus> {
 
                                 Padding(
                                     padding: const EdgeInsets.fromLTRB(3, 11, 11, 11),
-                                    child: Image.asset(
-                                      "images/privacy.png",
-                                      color: ColorsResources.light,
-                                      height: 51,
-                                      width: 51,
+                                    child: ImageRenderer(
+                                      alt: 'Arwen AI Privacy and Policy',
+                                      child: Image.asset(
+                                        "images/privacy.png",
+                                        color: ColorsResources.light,
+                                        height: 51,
+                                        width: 51,
+                                      )
                                     )
                                 ),
 
@@ -229,13 +251,16 @@ class _MenusState extends State<Menus> {
                                 ),
 
                                 Expanded(
-                                    child: Text(
-                                      StringsResources.privacyPolicy(),
-                                      maxLines: 2,
-                                      style: const TextStyle(
-                                          color: ColorsResources.lightTransparent,
-                                          fontSize: 15
-                                      ),
+                                    child: TextRenderer(
+                                      style: TextRendererStyle.header2,
+                                      child: Text(
+                                        StringsResources.privacyPolicy(),
+                                        maxLines: 2,
+                                        style: const TextStyle(
+                                            color: ColorsResources.lightTransparent,
+                                            fontSize: 15
+                                        ),
+                                      )
                                     )
                                 )
 
@@ -264,10 +289,13 @@ class _MenusState extends State<Menus> {
                           launchUrlString(StringsResources.threadsLink(), mode: LaunchMode.externalApplication);
 
                         },
-                        child: const Image(
-                          image: AssetImage("images/threads_icon.png"),
-                          height: 51,
-                          width: 51,
+                        child: const ImageRenderer(
+                          alt: 'Arwen AI on Threads',
+                          child: Image(
+                            image: AssetImage("images/threads_icon.png"),
+                            height: 51,
+                            width: 51,
+                          )
                         )
                     ),
 
@@ -281,10 +309,13 @@ class _MenusState extends State<Menus> {
                           launchUrlString(StringsResources.twitterLink(), mode: LaunchMode.externalApplication);
 
                         },
-                        child: const Image(
-                          image: AssetImage("images/twitter_icon.png"),
-                          height: 51,
-                          width: 51,
+                        child: const ImageRenderer(
+                          alt: 'Arwen AI on X, Twitter',
+                          child: Image(
+                            image: AssetImage("images/twitter_icon.png"),
+                            height: 51,
+                            width: 51,
+                          )
                         )
                     ),
 
@@ -298,10 +329,13 @@ class _MenusState extends State<Menus> {
                           launchUrlString(StringsResources.youtubeLink(), mode: LaunchMode.externalApplication);
 
                         },
-                        child: const Image(
-                          image: AssetImage("images/youtube_icon.png"),
-                          height: 51,
-                          width: 51,
+                        child: const ImageRenderer(
+                          alt: 'Arwen AI on YouTube',
+                          child: Image(
+                            image: AssetImage("images/youtube_icon.png"),
+                            height: 51,
+                            width: 51,
+                          )
                         )
                     )
 

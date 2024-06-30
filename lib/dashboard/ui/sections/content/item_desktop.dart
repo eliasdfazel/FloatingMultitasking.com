@@ -3,6 +3,7 @@ import 'package:multitasking/dashboard/provider/content_data_structure.dart';
 import 'package:multitasking/resources/colors_resources.dart';
 import 'package:multitasking/utils/modifications/numbers.dart';
 import 'package:multitasking/utils/ui/display.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ItemDesktop extends StatefulWidget {
@@ -88,13 +89,16 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                 child: SizedBox(
                                     width: calculatePercentage(63, displayLogicalWidth(context)),
                                     height: calculatePercentage(6, displayLogicalWidth(context)),
-                                    child: Text(
-                                      widget.contentDataStructure.applicationDescriptionValue(),
-                                      style: TextStyle(
-                                          color: ColorsResources.premiumLight,
-                                          fontSize: calculatePercentage(1.11, displayLogicalWidth(context)),
-                                          height: 1.19
-                                      ),
+                                    child: TextRenderer(
+                                      style: TextRendererStyle.paragraph,
+                                      child: Text(
+                                        widget.contentDataStructure.applicationDescriptionValue(),
+                                        style: TextStyle(
+                                            color: ColorsResources.premiumLight,
+                                            fontSize: calculatePercentage(1.11, displayLogicalWidth(context)),
+                                            height: 1.19
+                                        ),
+                                      )
                                     )
                                 )
                             )
@@ -124,10 +128,13 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                               launchUrlString(widget.contentDataStructure.applicationFacebookValue(), mode: LaunchMode.externalNonBrowserApplication);
 
                                             },
-                                            child: const Padding(
-                                                padding: EdgeInsets.all(5),
-                                                child: Image(
-                                                  image: AssetImage('images/facebook_icon.png'),
+                                            child: Padding(
+                                                padding: const EdgeInsets.all(5),
+                                                child: ImageRenderer(
+                                                  alt: widget.contentDataStructure.applicationSummaryValue(),
+                                                  child: const Image(
+                                                    image: AssetImage('images/facebook_icon.png'),
+                                                  )
                                                 )
                                             )
                                         )
@@ -142,10 +149,13 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                               launchUrlString(widget.contentDataStructure.applicationXValue(), mode: LaunchMode.externalNonBrowserApplication);
 
                                             },
-                                            child: const Padding(
-                                                padding: EdgeInsets.all(5),
-                                                child: Image(
-                                                  image: AssetImage('images/twitter_icon.png'),
+                                            child: Padding(
+                                                padding: const EdgeInsets.all(5),
+                                                child: ImageRenderer(
+                                                  alt: widget.contentDataStructure.applicationSummaryValue(),
+                                                  child: const Image(
+                                                    image: AssetImage('images/twitter_icon.png'),
+                                                  )
                                                 )
                                             )
                                         )
@@ -160,10 +170,13 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                               launchUrlString(widget.contentDataStructure.applicationYoutubeValue(), mode: LaunchMode.externalNonBrowserApplication);
 
                                             },
-                                            child: const Padding(
-                                                padding: EdgeInsets.all(5),
-                                                child: Image(
-                                                  image: AssetImage('images/youtube_icon.png'),
+                                            child: Padding(
+                                                padding: const EdgeInsets.all(5),
+                                                child: ImageRenderer(
+                                                  alt: widget.contentDataStructure.applicationSummaryValue(),
+                                                  child: const Image(
+                                                    image: AssetImage('images/youtube_icon.png'),
+                                                  )
                                                 )
                                             )
                                         )
@@ -207,8 +220,11 @@ class _ItemDesktopState extends State<ItemDesktop> {
                                                     });
 
                                                   },
-                                                  child: const Image(
-                                                    image: AssetImage('images/install_icon.png'),
+                                                  child: ImageRenderer(
+                                                    alt: widget.contentDataStructure.applicationSummaryValue(),
+                                                    child: const Image(
+                                                      image: AssetImage('images/install_icon.png'),
+                                                    )
                                                   )
                                               )
                                           )
@@ -250,11 +266,14 @@ class _ItemDesktopState extends State<ItemDesktop> {
                   borderRadius: BorderRadius.circular(19),
                   child: SizedBox(
                     width: calculatePercentage(27, displayLogicalWidth(context)),
-                    child: Image.network(
-                      widget.contentDataStructure.applicationCoverValue(),
-                      alignment: Alignment.bottomCenter,
-                      fit: BoxFit.cover,
-                    ),
+                    child: ImageRenderer(
+                      alt: widget.contentDataStructure.applicationSummaryValue(),
+                      child: Image.network(
+                        widget.contentDataStructure.applicationCoverValue(),
+                        alignment: Alignment.bottomCenter,
+                        fit: BoxFit.cover,
+                      ),
+                    )
                   )
               ),
 
@@ -268,9 +287,12 @@ class _ItemDesktopState extends State<ItemDesktop> {
                             child: SizedBox(
                                 height: calculatePercentage(13, displayLogicalHeight(context)),
                                 width: calculatePercentage(13, displayLogicalHeight(context)),
-                                child: Image.network(
-                                  widget.contentDataStructure.applicationIconValue(),
-                                  fit: BoxFit.cover,
+                                child: ImageRenderer(
+                                  alt: widget.contentDataStructure.applicationSummaryValue(),
+                                  child: Image.network(
+                                    widget.contentDataStructure.applicationIconValue(),
+                                    fit: BoxFit.cover,
+                                  )
                                 )
                             )
                         ),
@@ -284,14 +306,17 @@ class _ItemDesktopState extends State<ItemDesktop> {
                             width: calculatePercentage(15, displayLogicalWidth(context)),
                             child: Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(
-                                  widget.contentDataStructure.applicationNameValue(),
-                                  maxLines: 2,
-                                  style: TextStyle(
-                                      color: ColorsResources.premiumLight,
-                                      fontSize: calculatePercentage(2.73, displayLogicalWidth(context)),
-                                      overflow: TextOverflow.ellipsis
-                                  ),
+                                child: TextRenderer(
+                                  style: TextRendererStyle.header1,
+                                  child: Text(
+                                    widget.contentDataStructure.applicationNameValue(),
+                                    maxLines: 2,
+                                    style: TextStyle(
+                                        color: ColorsResources.premiumLight,
+                                        fontSize: calculatePercentage(2.73, displayLogicalWidth(context)),
+                                        overflow: TextOverflow.ellipsis
+                                    ),
+                                  )
                                 )
                             )
                         )
@@ -306,12 +331,15 @@ class _ItemDesktopState extends State<ItemDesktop> {
                       height: calculatePercentage(15, displayLogicalHeight(context)),
                       child: Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            widget.contentDataStructure.applicationSummaryValue(),
-                            style: TextStyle(
+                          child: TextRenderer(
+                            style: TextRendererStyle.paragraph,
+                            child: Text(
+                              widget.contentDataStructure.applicationSummaryValue(),
+                              style: TextStyle(
                                 color: ColorsResources.premiumLight,
                                 fontSize: calculatePercentage(1.73, displayLogicalWidth(context)),
-                            ),
+                              ),
+                            )
                           )
                       )
                   )
@@ -391,8 +419,11 @@ class _ItemDesktopState extends State<ItemDesktop> {
                   }
 
                 },
-                child: Image.network(
-                  screenshotLink,
+                child: ImageRenderer(
+                  alt: widget.contentDataStructure.applicationSummaryValue(),
+                  child: Image.network(
+                    screenshotLink,
+                  )
                 )
             )
         )

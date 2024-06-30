@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:meta_seo/meta_seo.dart';
 import 'package:multitasking/dashboard/provider/content_data_structure.dart';
 import 'package:multitasking/dashboard/provider/content_provider.dart';
 import 'package:multitasking/dashboard/ui/sections/content/item_desktop.dart';
@@ -96,6 +98,15 @@ class DashboardState extends State<Dashboard> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+
+    if (kIsWeb) {
+      MetaSEO metaSEO = MetaSEO();
+      metaSEO.author(author: 'Arwen AI at Geeks Empire');
+      metaSEO.description(description: 'Arwen AI - Better Productivity by Advanced AI Powered Assistant for Better Lifestyle, Multitasking, Productivity');
+      metaSEO.keywords(keywords: 'Arwen AI, Arwen Multitasking, Arwen, Floating App, Multitasking App, Productivity App, Floating Shortcuts, Floating Widgets, Floating Widgets Android, Android Widgets, Overly Widgets, '
+          'AI for Multitasking, AI for Productivity, Android Multitasking, Android Productivity, Floating Applications, Floating Multitasking,Android, Tablet, Multitasking AI, Floating Multitasking APK, '
+          'Floating Multitasking Geeks Empire, Geeks Empire');
+    }
 
     return SafeArea(
         child: MaterialApp(

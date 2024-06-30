@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:multitasking/dashboard/ui/Dashboard.dart';
 import 'package:multitasking/resources/colors_resources.dart';
+import 'package:seo_renderer/renderers/image_renderer/image_renderer_vm.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class Header extends StatefulWidget {
@@ -101,8 +102,11 @@ class _HeaderState extends State<Header> {
                                         }
 
                                       },
-                                      child: const Image(
-                                        image: AssetImage("images/menu.png"),
+                                      child: const ImageRenderer(
+                                        alt: 'Arwen AI Menu',
+                                        child: Image(
+                                          image: AssetImage("images/menu.png"),
+                                        )
                                       )
                                   )
                               )
@@ -118,8 +122,11 @@ class _HeaderState extends State<Header> {
                                         SizedBox(
                                             height: 57 / scaleParameter,
                                             width: 57 / scaleParameter,
-                                            child: const Image(
-                                              image: AssetImage("images/logo.png"),
+                                            child: const ImageRenderer(
+                                              alt: 'Geeks Empire Logo',
+                                              child: Image(
+                                                image: AssetImage("images/logo.png"),
+                                              )
                                             )
                                         ),
 
@@ -133,9 +140,12 @@ class _HeaderState extends State<Header> {
                                               padding: EdgeInsets.only(top: 5, bottom: 5),
                                               child: Align(
                                                 alignment: Alignment.centerLeft,
-                                                child: Image(
-                                                  image: AssetImage("images/geeks_empire.png"),
-                                                  fit: BoxFit.contain,
+                                                child: ImageRenderer(
+                                                  alt: 'Geeks Empire Text Logo',
+                                                  child: Image(
+                                                    image: AssetImage("images/geeks_empire.png"),
+                                                    fit: BoxFit.contain,
+                                                  )
                                                 )
                                               )
                                             )
@@ -157,8 +167,11 @@ class _HeaderState extends State<Header> {
                                         launchUrlString("mailto:Support@GeeksEmpire.co", mode: LaunchMode.externalApplication);
 
                                       },
-                                      child: const Image(
-                                        image: AssetImage("images/support.png"),
+                                      child: const ImageRenderer(
+                                        alt: 'Arwen AI Support',
+                                        child: Image(
+                                          image: AssetImage("images/support.png"),
+                                        )
                                       )
                                   )
                               )
