@@ -54,6 +54,9 @@ dependencies:
   share_plus: ^7.2.0
 
   shared_preferences: ^2.2.2
+
+  meta_seo: ^3.0.9
+  seo_renderer: ^0.6.0
   ####### ####### #######
 
 
