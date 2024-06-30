@@ -6,12 +6,12 @@ class ContentProvider {
 
     List<ContentDataStructure> allContent = [];
 
-    allContent.add(ContentDataStructure('https://GeeksEmpire.co/Arwen',
+    allContent.add(ContentDataStructure('https://play.google.com/store/apps/details?id=co.geeksempire.arwen.ai',
         'Arwen AI', 'Floating AI Assistant For Multitasking',
         'Arwen; Floating AI Assistant ◼ Arwen will Learn from you. ◼ It Prepare the List of Applications You Need Accordingly. ◼ & will Show Them in a Floating Panel.',
-        'https://i0.wp.com/geeksempire.co/wp-content/uploads/2023/03/Arwen-Floating-AI-Assistant-Logo.png?w=512&ssl=1',
-        'https://i0.wp.com/geeksempire.co/wp-content/uploads/2023/11/Arwen-AI-Floating-Assistant.png?fit=1024%2C500&ssl=1',
-        'https://geeksempire.co/wp-content/uploads/2023/03/Arwen-AI-Overview.png',
+        'https://geeksempire.co/wp-content/uploads/2024/03/Arwen-AI-Logo.png',
+        'https://geeksempire.co/wp-content/uploads/2024/03/Arwen-AI-Cover.png',
+        'https://geeksempire.co/wp-content/uploads/2024/03/Arwen-AI-Play.png,https://geeksempire.co/wp-content/uploads/2024/03/Arwen-AI-Overview.png,https://geeksempire.co/wp-content/uploads/2023/03/Arwen-AI-Overview.png',
         'https://www.youtube.com/@GeeksEmpireCo', 'https://twitter.com/GeeksEmpire', 'https://www.facebook.com/ArwenAI.Assistant'));
 
     allContent.add(ContentDataStructure('https://play.google.com/store/apps/details?id=net.geekstools.floatshort.PRO',
