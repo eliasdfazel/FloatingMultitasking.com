@@ -3,6 +3,7 @@ import 'package:multitasking/dashboard/provider/content_data_structure.dart';
 import 'package:multitasking/resources/colors_resources.dart';
 import 'package:multitasking/utils/modifications/numbers.dart';
 import 'package:multitasking/utils/ui/display.dart';
+import 'package:seo_renderer/seo_renderer.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ItemMobile extends StatefulWidget {
@@ -80,10 +81,13 @@ class _ItemMobileState extends State<ItemMobile> {
                                     launchUrlString(widget.contentDataStructure.applicationFacebookValue(), mode: LaunchMode.externalNonBrowserApplication);
 
                                   },
-                                  child: const Padding(
-                                      padding: EdgeInsets.all(5),
-                                      child: Image(
-                                        image: AssetImage('images/facebook_icon.png'),
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(5),
+                                      child: ImageRenderer(
+                                        alt: widget.contentDataStructure.applicationSummaryValue(),
+                                        child: const Image(
+                                          image: AssetImage('images/facebook_icon.png'),
+                                        )
                                       )
                                   )
                               )
@@ -98,10 +102,13 @@ class _ItemMobileState extends State<ItemMobile> {
                                     launchUrlString(widget.contentDataStructure.applicationXValue(), mode: LaunchMode.externalNonBrowserApplication);
 
                                   },
-                                  child: const Padding(
-                                      padding: EdgeInsets.all(5),
-                                      child: Image(
-                                        image: AssetImage('images/twitter_icon.png'),
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(5),
+                                      child: ImageRenderer(
+                                        alt: widget.contentDataStructure.applicationSummaryValue(),
+                                        child: const Image(
+                                          image: AssetImage('images/twitter_icon.png'),
+                                        )
                                       )
                                   )
                               )
@@ -116,10 +123,13 @@ class _ItemMobileState extends State<ItemMobile> {
                                     launchUrlString(widget.contentDataStructure.applicationYoutubeValue(), mode: LaunchMode.externalNonBrowserApplication);
 
                                   },
-                                  child: const Padding(
-                                      padding: EdgeInsets.all(5),
-                                      child: Image(
-                                        image: AssetImage('images/youtube_icon.png'),
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(5),
+                                      child: ImageRenderer(
+                                        alt: widget.contentDataStructure.applicationSummaryValue(),
+                                        child: const Image(
+                                          image: AssetImage('images/youtube_icon.png'),
+                                        )
                                       )
                                   )
                               )
@@ -163,11 +173,14 @@ class _ItemMobileState extends State<ItemMobile> {
                                         },
                                         child: SizedBox(
                                           height: calculatePercentage(11, displayLogicalWidth(context)),
-                                          child: const Padding(
-                                            padding: EdgeInsets.fromLTRB(13, 7, 0, 7),
-                                            child: Image(
-                                              image: AssetImage('images/install_icon.png'),
-                                              fit: BoxFit.fill,
+                                          child: Padding(
+                                            padding: const EdgeInsets.fromLTRB(13, 7, 0, 7),
+                                            child: ImageRenderer(
+                                              alt: widget.contentDataStructure.applicationSummaryValue(),
+                                              child: const Image(
+                                                image: AssetImage('images/install_icon.png'),
+                                                fit: BoxFit.fill,
+                                              )
                                             )
                                           )
                                         )
@@ -208,10 +221,13 @@ class _ItemMobileState extends State<ItemMobile> {
                   child: SizedBox(
                     width: calculatePercentage(83, displayLogicalWidth(context)),
                     height: calculatePercentage(21, displayLogicalHeight(context)),
-                    child: Image.network(
-                      widget.contentDataStructure.applicationCoverValue(),
-                      alignment: Alignment.bottomCenter,
-                      fit: BoxFit.cover,
+                    child: ImageRenderer(
+                      alt: widget.contentDataStructure.applicationSummaryValue(),
+                      child: Image.network(
+                        widget.contentDataStructure.applicationCoverValue(),
+                        alignment: Alignment.bottomCenter,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   )
               ),
@@ -226,9 +242,12 @@ class _ItemMobileState extends State<ItemMobile> {
                             child: SizedBox(
                                 height: calculatePercentage(9, displayLogicalHeight(context)),
                                 width: calculatePercentage(9, displayLogicalHeight(context)),
-                                child: Image.network(
-                                  widget.contentDataStructure.applicationIconValue(),
-                                  fit: BoxFit.cover,
+                                child: ImageRenderer(
+                                  alt: widget.contentDataStructure.applicationSummaryValue(),
+                                  child: Image.network(
+                                    widget.contentDataStructure.applicationIconValue(),
+                                    fit: BoxFit.cover,
+                                  )
                                 )
                             )
                         ),
@@ -242,14 +261,17 @@ class _ItemMobileState extends State<ItemMobile> {
                             width: calculatePercentage(37, displayLogicalWidth(context)),
                             child: Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(
-                                  widget.contentDataStructure.applicationNameValue(),
-                                  maxLines: 2,
-                                  style: TextStyle(
-                                      color: ColorsResources.premiumLight,
-                                      fontSize: calculatePercentage(6, displayLogicalWidth(context)),
-                                      overflow: TextOverflow.ellipsis
-                                  ),
+                                child: TextRenderer(
+                                  style: TextRendererStyle.header1,
+                                  child: Text(
+                                    widget.contentDataStructure.applicationNameValue(),
+                                    maxLines: 2,
+                                    style: TextStyle(
+                                        color: ColorsResources.premiumLight,
+                                        fontSize: calculatePercentage(6, displayLogicalWidth(context)),
+                                        overflow: TextOverflow.ellipsis
+                                    ),
+                                  )
                                 )
                             )
                         )
@@ -265,12 +287,15 @@ class _ItemMobileState extends State<ItemMobile> {
                       height: calculatePercentage(5, displayLogicalHeight(context)),
                       child: Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(
-                            widget.contentDataStructure.applicationSummaryValue(),
-                            style: TextStyle(
-                              color: ColorsResources.premiumLight,
-                              fontSize: calculatePercentage(3.73, displayLogicalWidth(context)),
-                            ),
+                          child: TextRenderer(
+                            style: TextRendererStyle.paragraph,
+                            child: Text(
+                              widget.contentDataStructure.applicationSummaryValue(),
+                              style: TextStyle(
+                                color: ColorsResources.premiumLight,
+                                fontSize: calculatePercentage(3.73, displayLogicalWidth(context)),
+                              ),
+                            )
                           )
                       )
                   )
@@ -347,8 +372,11 @@ class _ItemMobileState extends State<ItemMobile> {
                 }
 
               },
-              child: Image.network(
-                screenshotLink,
+              child: ImageRenderer(
+                alt: widget.contentDataStructure.applicationSummaryValue(),
+                child: Image.network(
+                  screenshotLink,
+                )
               )
           )
       )
