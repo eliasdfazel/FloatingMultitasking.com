@@ -1,0 +1,46 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "co.geeksempire.arwen.ai",
+      "sha256_cert_fingerprints": [
+        "9bd0254112454caef1c3f2d9f8da5f86a69c997ad11b7911dc9fc2d81194ae54",
+        "50cff262ecac7c8579dcbb8396f2b9b1952a3544f6e864d14f3e69181a5290c7",
+        "5f6cfea30b3882ffb96cc6693aa2abec78fd6e31358ad88cddc1274feb3572d2"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.geekstools.floatshort.PRO",
+      "sha256_cert_fingerprints": [
+        "47ef0877fd780ecfdb974dad106e7512b728656837b2d319276b36c16b4fe5bd",
+        "9bd0254112454caef1c3f2d9f8da5f86a69c997ad11b7911dc9fc2d81194ae54",
+        "bdaf308de0b82ab39ce03a4e2d16bb332abeb4c06d7536558032d05976778541",
+        "50:5C:2D:D7:61:3C:91:B2:10:E6:2C:02:BD:72:35:1F:99:7B:29:99:5B:0F:EF:AC:52:27:2A:EC:C1:F9:36:DA",
+        "47:EF:08:77:FD:78:0E:CF:DB:97:4D:AD:10:6E:75:12:B7:28:65:68:37:B2:D3:19:27:6B:36:C1:6B:4F:E5:BD"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "net.geekstools.supershortcuts.PRO",
+      "sha256_cert_fingerprints": [
+        "e9f579a495d5ea5a6cf516daa758f5b2c624c9dd566fb861eba9164d828560d5",
+        "ebe274617d6aa95193fff635bf756e964d3b082aa3fae6d2a0d50e38e9f2aace",
+        "9bd0254112454caef1c3f2d9f8da5f86a69c997ad11b7911dc9fc2d81194ae54"
+      ]
+    }
+  }
+]
